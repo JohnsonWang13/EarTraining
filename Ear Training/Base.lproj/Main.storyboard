@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zIB-d2-6m6">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Apple_Chancery.ttf">
+            <string>Apple-Chancery</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="8U8-vn-Kao">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="zIB-d2-6m6" customClass="MainViewController" customModule="Ear_Training" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Drm-cU-msj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Oc1-i5-RH7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hyA-oC-bfA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="CKF-q0-2QL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSF-bQ-wQk" customClass="GamesViewScroll" customModule="Ear_Training" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="184" width="414" height="368"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Spotlight" translatesAutoresizingMaskIntoConstraints="NO" id="Us6-Ut-6wV">
+                                <rect key="frame" x="111" y="0.0" width="192" height="505"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECh-So-PtV" customClass="StratTrainBtn" customModule="Ear_Training" customModuleProvider="target">
+                                <rect key="frame" x="112" y="640.33333333333337" width="190" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.76862745098039209" blue="0.37647058823529411" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Apple-Chancery" family="Apple Chancery" pointSize="17"/>
+                                <state key="normal" title="Start Training"/>
+                                <connections>
+                                    <action selector="start:" destination="zIB-d2-6m6" eventType="touchUpInside" id="Bmm-Nk-X8A"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hSF-bQ-wQk" firstAttribute="width" secondItem="hyA-oC-bfA" secondAttribute="width" id="0dO-oF-Nka"/>
+                            <constraint firstItem="ECh-So-PtV" firstAttribute="centerX" secondItem="hyA-oC-bfA" secondAttribute="centerX" id="3xQ-b9-Qrz"/>
+                            <constraint firstItem="Us6-Ut-6wV" firstAttribute="centerX" secondItem="hyA-oC-bfA" secondAttribute="centerX" id="8Hr-9y-zy1"/>
+                            <constraint firstItem="Us6-Ut-6wV" firstAttribute="height" secondItem="hyA-oC-bfA" secondAttribute="height" multiplier="68.6:100" id="K9s-ZB-Num"/>
+                            <constraint firstItem="Us6-Ut-6wV" firstAttribute="top" secondItem="hyA-oC-bfA" secondAttribute="topMargin" id="MHB-F7-305"/>
+                            <constraint firstItem="CKF-q0-2QL" firstAttribute="leading" secondItem="hyA-oC-bfA" secondAttribute="leading" id="PEe-rv-2Gd"/>
+                            <constraint firstItem="hSF-bQ-wQk" firstAttribute="centerY" secondItem="hyA-oC-bfA" secondAttribute="centerY" id="SGV-J6-pHr"/>
+                            <constraint firstItem="Us6-Ut-6wV" firstAttribute="width" secondItem="hyA-oC-bfA" secondAttribute="width" multiplier="46.4:100" id="TA3-gV-u9J"/>
+                            <constraint firstItem="hSF-bQ-wQk" firstAttribute="centerX" secondItem="hyA-oC-bfA" secondAttribute="centerX" id="UDQ-Ik-mBp"/>
+                            <constraint firstItem="hSF-bQ-wQk" firstAttribute="height" secondItem="hyA-oC-bfA" secondAttribute="height" multiplier="1:2" id="UTB-01-KTC"/>
+                            <constraint firstItem="CKF-q0-2QL" firstAttribute="top" secondItem="hyA-oC-bfA" secondAttribute="top" id="WFp-pg-HVL"/>
+                            <constraint firstItem="ECh-So-PtV" firstAttribute="width" secondItem="hyA-oC-bfA" secondAttribute="width" multiplier="63.3/138" id="h6O-jU-KNg"/>
+                            <constraint firstAttribute="trailing" secondItem="CKF-q0-2QL" secondAttribute="trailing" id="iCT-Sx-VYG"/>
+                            <constraint firstItem="ECh-So-PtV" firstAttribute="centerY" secondItem="hyA-oC-bfA" secondAttribute="centerY" multiplier="1.8:1" id="iQg-DW-bWe"/>
+                            <constraint firstItem="ECh-So-PtV" firstAttribute="height" secondItem="hyA-oC-bfA" secondAttribute="height" multiplier="14.7/245.3" id="ooL-8c-gWU"/>
+                            <constraint firstItem="Oc1-i5-RH7" firstAttribute="top" secondItem="CKF-q0-2QL" secondAttribute="bottom" id="zIJ-Ce-mqK"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="414" height="736"/>
+                    <connections>
+                        <outlet property="gameView" destination="hSF-bQ-wQk" id="nJW-Iw-ene"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FY9-nY-PsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2829" y="1092"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="736"/>
+        <image name="Spotlight" width="192" height="507"/>
+    </resources>
+</document>
